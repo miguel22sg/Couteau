@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <button [routerLink]="['../home']" class="icon-home"><ion-icon name="home-outline"></ion-icon></button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let items of weather">
+    <img alt="Silhouette of mountains" src="../../assets/image/weather/Santo-Domingo-4.jpg" />
+    <ion-card-header>
+      <ion-card-title>Santo Domingo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="txtTemperatura"><Strong>Temperatura: </Strong>{{items.temp}}°C</p>
+      <p class="txtClima"> <strong>Clima: </strong>{{items.weather.description}}</p>
+      <img height="100px" src="https://cdn.weatherbit.io/static/img/icons/{{items.weather.icon}}.png" alt="">
+      <p class="txtFecha"><Strong>Fecha: </Strong>{{items.datetime}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

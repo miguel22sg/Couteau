@@ -1,0 +1,34 @@
+.icon-home{
+  font-size: 30px;
+  border-radius: 20px;
+  background: none;
+  color: lightblue;
+}
+.icon-home:active{
+  color: pink;
+}
+p{
+  margin-top: 20px;
+  font-size: 25px;
+}
+.txtTemperatura{
+  color: #F25E49;
+}
+.txtTemperatura strong{
+  color: white;
+}
+.txtTemperatura:hover{
+  color: #F25E49;
+}
+.txtClima{
+  color: #FC4C58;
+}
+.txtClima strong{
+  color: white;
+}
+.txtFecha{
+  color: #E650A5;
+}
+.txtFecha strong{
+  color: white;
+}

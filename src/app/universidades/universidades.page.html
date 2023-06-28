@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <button [routerLink]="['../home']" class="icon-home"><ion-icon name="home-outline"></ion-icon></button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img alt="Silhouette of mountains" src="../../assets/image/universidad2.png" />
+    <ion-card-header>
+      <ion-card-title>Buscar universidades</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Con esta herramiena podras ver las diferentes universidades de los diferentes paises, por favor ingrese el nombre del pais en el barra de abajo.
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <input (input)="onInputChange($event)" [(ngModel)]="pais" placeholder="Ingrese el pais" class="input-buscar" type="search"><button (click)="Buscaruniversidades(20)" class="btnbuscar"><ion-icon name="search-outline"></ion-icon></button>
+  </ion-item>
+  <ion-list>
+    <ion-item class="accordion" *ngFor="let item of universidades">
+      <ion-accordion-group class="accordion">
+        <ion-accordion value="first">
+          <ion-item slot="header">
+            <ion-label>{{item.name}}</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content"><p><strong>Dominio:</strong> {{item.domains}}</p>
+            <a class="abtn" href={{item.web_pages}}><button class="btna">Visitar pagina</button></a></div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <button [routerLink]="['../home']" class="icon-home"><ion-icon name="home-outline"></ion-icon></button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="!mostrargenero">
+    <img alt="Silhouette of mountains" src="../../assets/image/genero.jpg" />
+    <ion-card-header>
+      <ion-card-title>Adivinar Genero</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Con esta herramiena podemos adivinar tu genero, ingresa tu nombre en el campo de abajo y nosotros magicamente te diremos si eres hombre o mujer.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="mostrargenero">
+    <img alt="Silhouette of mountains" src={{portada}} />
+    <ion-card-header>
+      <ion-card-title>{{genero}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+<ion-item>
+<input placeholder="Ingrese un nombre 😁" class="input-nombre" [(ngModel)]="nombre"/>
+</ion-item>
+<ion-item>
+  <button (click)="DefenirGenero()" class="btn-genero">Adivinar Genero</button>
+</ion-item>
+</ion-content>

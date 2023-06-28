@@ -1,0 +1,48 @@
+.icon-home{
+  font-size: 30px;
+  border-radius: 20px;
+  background: none;
+  color: lightblue;
+}
+.icon-home:active{
+  color: pink;
+}
+.input-buscar{
+  height: 40px;
+  width: 80%;
+  border-radius: 20px 0 0 20px;
+  padding-left: 20px;
+  outline: none;
+  background: transparent;
+  border: solid 2px gray;
+}
+.input-buscar:hover{
+  border: solid 2px pink;
+}
+.btnbuscar{
+  height: 40px;
+  width: 20%;
+  border-radius: 0 20px 20px 0;
+  background-color: pink;
+  color: black;
+  font-size: 20px;
+}
+.accordion{
+  width: 100%;
+  margin-top: 10px;
+  background: none;
+}
+.abtn{
+  width: 100%;
+  height: 30px;
+  background-color: beige;
+  color: black;
+}
+.btna{
+  width: 100%;
+  height: 30px;
+  background-color: beige;
+  color:black;
+  font-size: 20px;
+
+}

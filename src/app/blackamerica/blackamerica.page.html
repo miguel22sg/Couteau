@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <button [routerLink]="['../home']" class="icon-home"><ion-icon name="home-outline"></ion-icon></button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let items of contenido">
+    <img alt="" src={{items.jetpack_featured_media_url}} (error)="reemplazarImagen()" />
+    <ion-card-header>
+      <ion-card-title>{{items.yoast_head_json.og_title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Si quieres ver esta noticia completa entra presiona el boton debajo para que vayas directamente a la pagina de Black America
+    </ion-card-content>
+    <a class="abtn" href={{items.link}}><button class="abtn">Ver noticia completa</button></a>
+  </ion-card>
+<ion-item >
+</ion-item>
+</ion-content>
